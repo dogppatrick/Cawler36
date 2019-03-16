@@ -2,7 +2,7 @@ import urllib.request as urlr
 import json
 import os
 url = "https://www.google.com/doodles/json/2019/2?hl=zh_TW"
-path_dl = "E:\\Python\\Cawler36\\downloads\\"
+path_dl = "D:/Python_crawler/Cawler36"
 data_date = []
 for m in range(1, 12+1):
     data_date.append(("2018", str(m)))

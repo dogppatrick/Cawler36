@@ -2,9 +2,7 @@ from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 import warnings
 import requests
-import timeit
 import pandas as pd
-start = timeit.timeit()
 warnings.filterwarnings("ignore")
 # start connect
 url = "https://www.ptt.cc/bbs/PC_Shopping/M.1552579550.A.CAF.html"
@@ -61,6 +59,6 @@ c = c + ["url"]
 df = pd.DataFrame(columns=c)
 s = pd.Series(data_title + [url], index=c)
 df = df.append(s, ignore_index="true")
-# print(push_data)
+# # print(push_data)
 # print(content.text)
 df.to_csv("ptt_0315.csv", encoding="utf-8", index=False)
