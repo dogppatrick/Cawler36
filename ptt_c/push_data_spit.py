@@ -11,7 +11,7 @@ for i in range(len(data_in)):
         a.append(data_in.iloc[i, j])
     # print(a)
     s = pd.Series(a, index=data_c)
-    df = df.append(s, ignore_index="true")
+    df = df.append(s, ignore_index=True)
 
     if (i+1) % 50000 == 0:
         fn = "push_data_spit" + "%03d" % (file_spit,) + ".csv"
